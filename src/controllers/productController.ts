@@ -31,7 +31,7 @@ productRouter.get('/items', async (req: Request, res: Response) => {
     });
     res.json(products);
   } catch (error) {
-    res.status(500).json({ error: 'Error en la búsqueda' });
+    res.status(500).json({ error: 'Error en la búsqueda: ' + error });
   }
   return;
 });
